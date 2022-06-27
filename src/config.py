@@ -1,0 +1,6 @@
+RESULTS_PATH = "../results/"
+PRETRAINED_MODEL_PATH = "../results/pretrained_model/"
+MODELS_PATH = "../models/"
+CORD_FINETUNING_EPOCH = 5
+CORD_FINETUNING_BATCH_SIZE = 16
+CORD_19_BLOCK_SIZE = 256
