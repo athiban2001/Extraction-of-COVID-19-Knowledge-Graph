@@ -78,12 +78,10 @@ del vocab
 print(model.config)
 
 # creating and saving new model tokenizer
-covid_scibert_model_path = os.path.join(
-    config.MODELS_PATH, config.CORD_SCIBERT_MODEL_NAME)
 if not os.path.exists(config.MODELS_PATH):
     os.mkdir(config.MODELS_PATH)
-    os.mkdir(covid_scibert_model_path)
-tokenizer.save_pretrained(covid_scibert_model_path)
+    os.mkdir(config.CORD_SCIBERT_MODEL_PATH)
+tokenizer.save_pretrained(config.CORD_SCIBERT_MODEL_PATH)
 
 # creating masked language data collator
 data_collator = transformers.DataCollatorForLanguageModeling(
@@ -92,7 +90,7 @@ data_collator = transformers.DataCollatorForLanguageModeling(
 
 # training arguments
 training_args = transformers.TrainingArguments(
-    output_dir=covid_scibert_model_path,
+    output_dir=config.CORD_SCIBERT_MODEL_PATH,
     overwrite_output_dir=True,
     num_train_epochs=config.CORD_FINETUNING_EPOCH,
     per_device_train_batch_size=config.CORD_FINETUNING_BATCH_SIZE,
@@ -145,4 +143,4 @@ trainer = transformers.Trainer(
 )
 
 trainer.train()
-trainer.save_model(covid_scibert_model_path)
+trainer.save_model(config.CORD_SCIBERT_MODEL_PATH)

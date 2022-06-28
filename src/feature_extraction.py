@@ -5,12 +5,9 @@ import config
 import transformers
 
 # loading the covid scibert model and tokenizer
-covid_scibert_model_path = os.path.join(
-    config.MODELS_PATH, config.CORD_SCIBERT_MODEL_NAME)
-
-bert = transformers.AutoModel.from_pretrained(covid_scibert_model_path)
+bert = transformers.AutoModel.from_pretrained(config.CORD_SCIBERT_MODEL_PATH)
 tokenizer = transformers.BertTokenizer.from_pretrained(
-    covid_scibert_model_path,
+    config.CORD_SCIBERT_MODEL_PATH,
     do_lower_case=True
 )
 
