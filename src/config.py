@@ -102,3 +102,8 @@ GC_FINAL_RELATIONS_PATH = os.path.join(
     RESULTS_PATH, "GC", "full_relations.csv")
 GC_DB_RELATIONS_PATH = os.path.join(
     RESULTS_PATH, "GC", "database_dump", "relations.csv")
+
+# Representation Learning
+RL_DATASET_PATH = os.path.join(RESULTS_PATH, "RL", "dataset")
+RL_MODEL_PATH = os.path.join(
+    SRC_FOLDER_PATH, "..", "models", "KG-embeddings", "transd.ckpt")
