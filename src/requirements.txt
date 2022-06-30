@@ -28,3 +28,21 @@ sklearn==1.0.2
 numpy==1.21.5
 nltk==3.2.4
 pandas==1.3.5
+
+# environment for graph_construction/extraction.py
+
+transformers==4.18.0
+pytorch-crf==0.7.2
+torch==1.9.1+cpu
+dnspython==2.2.1
+pymongo[srv]==3.12.3
+joblib==1.0.1
+
+# environment for graph_construction/entities_filtering.py
+
+tqdm
+pandas==1.3.5
+
+# environment for graph_construction/neo4j.py
+
+neo4j==4.4.dev0

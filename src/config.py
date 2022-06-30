@@ -93,3 +93,12 @@ RE_CHEMPROT_DEV_FOLDER = os.path.join(
     RE_CHEMPROT_FOLDER, "chemprot_development", "chemprot_development")
 RE_CHEMPROT_MODEL_PATH = os.path.join(
     SRC_FOLDER_PATH, "..", "models", "RE", "CHEMPROT_SciBERT")
+
+# Graph Construction
+GC_MONGO_URL = "mongodb://127.0.0.1/"
+GC_NEO4J_URL = "neo4j://localhost:7687/"
+GC_CORD_19_PATH = os.path.join(SRC_FOLDER_PATH, "..", "datasets", "CORD19")
+GC_FINAL_RELATIONS_PATH = os.path.join(
+    RESULTS_PATH, "GC", "full_relations.csv")
+GC_DB_RELATIONS_PATH = os.path.join(
+    RESULTS_PATH, "GC", "database_dump", "relations.csv")
